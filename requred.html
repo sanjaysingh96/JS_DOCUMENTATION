@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function ch()
+{
+//alert("hii");
+var num=document.getElementById("tb1").value;
+var fnum=document.getElementById("tb2").value;
+var mnum=document.getElementById("tb3").value;
+//alert(num);
+if(num==""){
+//alert("invalid number");
+document.getElementById("sp").innerHTML="Invalid name";
+document.getElementById("tb1").style.border="2px solid red";
+}
+else if(fnum==""){
+document.getElementById("sp1").innerHTML="Invalid name";
+document.getElementById("tb2").style.border="2px solid red";
+}
+else if(mnum==""){
+document.getElementById("sp2").innerHTML="Invalid name";
+document.getElementById("tb3").style.border="2px solid red";
+
+}
+else{
+//alert("valid");
+document.getElementById("sp").innerHTML="";
+document.getElementById("sp1").innerHTML="";
+document.getElementById("tb1").style.border="";
+document.getElementById("tb2").style.border="";
+}
+}
+</script>
+</head>
+<body>
+</body>
+Enter name: 
+<input type="text" id="tb1"/>
+<span id="sp" style="color:red;"></span>
+<br><br>
+Enter father name:
+<input type="text" id="tb2"/>
+<span id="sp1" style="color:red;"></span>
+<br><br>
+Enter mother name:
+<input type="text" id="tb3"/>
+<span id="sp2" style="color:red;"></span>
+<br>
+<input type="button" value="Check" onclick="ch()"/>
+</html>

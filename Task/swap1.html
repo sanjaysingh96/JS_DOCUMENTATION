@@ -1,0 +1,46 @@
+<html>
+<head>
+
+<style>
+#one
+{
+height:200px;
+width:200px;
+border:1px solid;
+font-size:30px;
+}
+#two
+{
+height:200px;
+width:200px;
+border:1px solid;
+font-size:30px;
+}
+</style>
+<script>
+function ch()
+{
+//alert("hii");
+var a=document.getElementById("one").innerHTML;
+var b=document.getElementById("two").innerHTML;
+document.getElementById("one").innerHTML=b;
+document.getElementById("two").innerHTML=a;
+var c=document.getElementById("one").style.backgroundColor;
+//alert(c);
+var d=document.getElementById("two").style.backgroundColor;
+//alert(d);
+document.getElementById("one").style.backgroundColor=d;
+document.getElementById("two").style.backgroundColor=c;
+}
+
+</script>
+</head>
+<body>
+<div id="one" onmouseover="ch()" style="background-color:red;">
+Softpro
+</div><br><br>
+<div id="two" onmouseover="ch()" style="background-color:blue;">
+India
+</div>
+</body>
+</html>

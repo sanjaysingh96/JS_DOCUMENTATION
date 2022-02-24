@@ -1,0 +1,36 @@
+<html>		
+<head>
+<script>
+//alert("hii");
+var img=["1.jpg","2.jpg","3.jpg","4.jpg"];			//trafic signal H.W.
+var i=0;
+function slide()
+{
+//alert("hii");
+var div=document.getElementById("box");
+div.style.backgroundImage="url('images/"+img[i]+"')";
+i++;
+if(img.length==i)
+{
+i=0;
+}
+window.setTimeout("slide()",1000);
+}
+</script>
+<style>
+#box
+{
+height:300px;
+width:1000px;
+border:1px solid black;
+margin:50px auto;
+box-shadow:5px 5px 5px red;
+}
+</style>
+</head>
+<body onload="slide()">
+<div id="box">
+
+</div>
+</body>
+</html>

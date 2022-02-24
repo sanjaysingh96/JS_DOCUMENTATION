@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function ch()
+{
+//alert("hii");
+var em=/^[a-zA-Z0-9_.-]+@+[a-zA-Z]{3,7}\.+[a-zA-Z]{2,7}$/;
+var mail=document.getElementById("tb").value;
+//alert(mail);
+if(!em.test(mail))
+{
+//alert("Invalid");
+document.getElementById("sp").innerHTML="Invalid Email";
+document.getElementById("sp").style.color="red";
+document.getElementById("tb").style.border="2px solid red";
+}
+else
+{
+//alert("valid");
+document.getElementById("sp").innerHTML="Valid Email";
+document.getElementById("sp").style.color="green";
+document.getElementById("tb").style.border="2px solid green";
+}
+}
+</script>
+</head>
+<body>
+Email :
+<input type="text" id="tb"/>
+<span id="sp"></span>
+<br/>
+<br/>
+<input type="button" value="Valid" onclick="ch()"/>
+</body>
+</html>

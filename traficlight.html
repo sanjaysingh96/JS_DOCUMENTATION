@@ -1,0 +1,96 @@
+<html>
+<head>
+<style>
+body
+{
+margin:0px;
+padding:0px;
+background:#85C1E9;
+}
+#lights
+{
+min-height:310px;
+width:100px;
+background:black;
+margin:auto;
+border-radius:20% 20% 0 0;
+padding:8px;
+}
+#box1,#box2,#box3
+{
+height:100px;
+width:100px;
+border-radius:50%;
+margin-top:4px;
+border:1px solid white;
+}
+#line
+{
+height:300px;
+width:30px;
+background:black;
+margin:auto;
+position:relative;
+z-index:-1;
+}
+#line2
+{
+height:20px;
+width:100px;
+background:black;
+margin:auto;
+//position:fixed;
+z-index:-1;
+}
+img
+{
+z-index:999;
+}
+</style>
+
+</head>
+<body>
+<div id="lights"> 
+<div id="box1" ></div>
+<div id="box2" ></div>
+<div id="box3" ></div>
+</div>
+<div id="line"></div>
+<div id="line2"></div>
+<img src="images/car.png" height="300px" width="300px"/>
+<script>
+function box3()
+{
+var box3=document.getElementById("box3");
+box3.style.backgroundColor="green";
+box3.style.boxShadow="0px 0px 10px green,0px 0px 30px green";
+var box2=document.getElementById("box2");
+box2.style.backgroundColor="black";
+box2.style.boxShadow="none";
+setTimeout(box1,2000);
+}
+function box1()
+{
+var box1=document.getElementById("box1");
+box1.style.backgroundColor="red";
+box1.style.boxShadow="0px 0px 10px red,0px 0px 30px red";
+setTimeout(box2,2000);
+var box3=document.getElementById("box3");
+box3.style.backgroundColor="black";
+box3.style.boxShadow="none";
+}
+function box2()
+{
+var box2=document.getElementById("box2");
+box2.style.backgroundColor="yellow";
+box2.style.boxShadow="0px 0px 10px yellow,0px 0px 30px yellow";
+var box1=document.getElementById("box1");
+box1.style.backgroundColor="black";
+box1.style.boxShadow="none";
+setTimeout(box3,2000);
+}
+
+box1();
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+function cal()
+{
+//alert("hii");
+var n1=document.getElementById("f").value;
+//alert(n1);
+var n2=document.getElementById("s").value;
+//alert(n2);
+var ad=document.getElementById("ch").value;
+if(ad==1){
+var s1=parseInt(n1)+parseInt(n2);
+//document.write(s1);
+alert(s1);
+}
+else if(ad==2){
+s2=n1-n2;
+alert(s2);
+}
+else if(ad==3){
+s3=n1/n2;
+alert(s3);
+}
+else{
+s4=n1*n2;
+alert(s4);
+}
+}
+</script>
+</head>
+<body>
+Enter first number:
+<input type="text" id="f"/>
+<br>
+Enter second number:
+<input type="text" id="s"/>
+<br>
+<select id="ch">
+<option value="1">Add</option>
+<option value="2">Sub</option>
+<option value="3">Div</option>
+<option value="4">Mul</option>
+</select>
+<br>
+<input type="button" value="Calculate" onclick="cal()"/>
+</body>
+</html>

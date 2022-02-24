@@ -1,0 +1,69 @@
+<html>
+<head>
+<script>
+function ch()
+{
+//alert("hii");
+var pn=/^[0-9]{10}$/;
+var pname=/^[a-zA-Z ]{3,8}$/;
+var fname=/^[a-zA-Z ]{3,8}$/;
+var mob=document.getElementById("tb1").value;
+var name=document.getElementById("tb2").value;
+var father=document.getElementById("tb3").value;
+//alert(mob);
+if(!pn.test(mob))
+{
+document.getElementById("sp1").innerHTML="Invalid Number";
+document.getElementById("sp1").style.color="red";
+document.getElementById("tb1").style.border="2px solid red";
+}
+else
+{
+document.getElementById("sp1").innerHTML="Valid Number";
+document.getElementById("sp1").style.color="green";
+document.getElementById("tb1").style.border="2px solid green";
+}
+if(!pname.test(name))
+{
+document.getElementById("sp2").innerHTML="Invalid Name";
+document.getElementById("sp2").style.color="red";
+document.getElementById("tb2").style.border="2px solid red";
+}
+else
+{
+document.getElementById("sp2").innerHTML="Valid Name";
+document.getElementById("sp2").style.color="green";
+document.getElementById("tb2").style.border="2px solid green";
+}
+if(!fname.test(father))
+{
+document.getElementById("sp3").innerHTML="Invalid F'Name";
+document.getElementById("sp3").style.color="red";
+document.getElementById("tb3").style.border="2px solid red";
+}
+else
+{
+document.getElementById("sp3").innerHTML="Valid Name";
+document.getElementById("sp3").style.color="green";
+document.getElementById("tb3").style.border="2px solid green";
+}
+}
+</script>
+</head>
+<body>
+Mobile :&nbsp;
+<input type="text" id="tb1"/>
+<span id="sp1"></span>
+<br/>
+Name :&nbsp;&nbsp;&nbsp;
+<input type="text" id="tb2"/>
+<span id="sp2"></span>
+<br/>
+F'Name :
+<input type="text" id="tb3"/>
+<span id="sp3"></span>
+<br/>
+<br/>
+<input type="button" value="Valid" onclick="ch()"/>
+</body>
+</html>

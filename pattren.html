@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+// pattern Validation
+function ch()
+{
+//alert("hiii");
+var pn=/^[a-zA-Z ]{3,6}$/;
+var name=document.getElementById("tb").value;
+if(!pn.test(name))
+{
+document.getElementById("sp").innerHTML="Invalid Password";
+document.getElementById("sp").style.color="red";
+document.getElementById("tb").style.border="2px dotted red";
+}
+else
+{
+document.getElementById("sp").innerHTML="Valid Password";
+document.getElementById("sp").style.color="green";
+document.getElementById("tb").style.border="2px dotted green";
+}
+}
+</script>
+</head>
+<body>
+Name
+<input type="text" id="tb"/>
+<span id="sp"></span>
+<br><br>
+<input type="button" value="CHeck" onclick="ch()"/>
+</body>
+</html>
